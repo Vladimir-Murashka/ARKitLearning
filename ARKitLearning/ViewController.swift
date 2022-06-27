@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         let scene = SCNScene()
        
         sceneView.scene = scene
-        
+        setupGestures()
         sceneView.scene.physicsWorld.contactDelegate = self
     }
     
@@ -36,8 +36,38 @@ class ViewController: UIViewController {
         let tapGesureRecognizer = UITapGestureRecognizer(target: self, action: #selector(placeBox))
         tapGesureRecognizer.numberOfTapsRequired = 1
         self.sceneView.addGestureRecognizer(tapGesureRecognizer)
+        
+        let doubletapGesureRecognizer = UITapGestureRecognizer(target: self, action: #selector(placeVirtualObject))
+        doubletapGesureRecognizer.numberOfTapsRequired = 2
+        self.sceneView.addGestureRecognizer(doubletapGesureRecognizer)
+        
+        tapGesureRecognizer.require(toFail: doubletapGesureRecognizer)
     }
     
+    @objc func placeVirtualObject(tapGesture: UITapGestureRecognizer) {
+        
+        let sceneView = tapGesture.view as! ARSCNView
+        let location = tapGesture.location(in: sceneView)
+        
+        let hitTestResult = sceneView.hitTest(location, types: .existingPlaneUsingExtent)
+        guard let hitResult = hitTestResult.first else { return }
+        
+        createVirtualObject(hitResult: hitResult)
+    }
+    
+    func createVirtualObject(hitResult: ARHitTestResult) {
+        
+        let position = SCNVector3(hitResult.worldTransform.columns.3.x,
+                                  hitResult.worldTransform.columns.3.y,
+                                  hitResult.worldTransform.columns.3.z)
+        
+        let victualObject = VirtualObject.availableObjects[1]
+        victualObject.position = position
+        victualObject.load()
+        sceneView.scene.rootNode.addChildNode(victualObject)
+       
+    }
+   
     @objc func placeBox(tapGesture: UITapGestureRecognizer) {
         
         let sceneView = tapGesture.view as! ARSCNView
