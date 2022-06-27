@@ -13,10 +13,10 @@
 		22342474285394CA00ED5D33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22342472285394CA00ED5D33 /* Main.storyboard */; };
 		22342476285394D000ED5D33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22342475285394D000ED5D33 /* Assets.xcassets */; };
 		22342479285394D000ED5D33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22342477285394D000ED5D33 /* LaunchScreen.storyboard */; };
-		2234248628539A1A00ED5D33 /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2234248528539A1900ED5D33 /* earth.jpg */; };
 		22A06E22285D04E100956B06 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A06E21285D04E000956B06 /* Plane.swift */; };
 		22A06E24285E1B4A00956B06 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A06E23285E1B4A00956B06 /* Box.swift */; };
 		22A06E26285E296000956B06 /* BitMaskCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A06E25285E296000956B06 /* BitMaskCategory.swift */; };
+		22A8377E2869C4CB002D74DA /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A8377D2869C4CB002D74DA /* VirtualObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +27,10 @@
 		22342473285394CA00ED5D33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22342475285394D000ED5D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22342478285394D000ED5D33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2234248528539A1900ED5D33 /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = earth.jpg; path = ../../../earth.jpg; sourceTree = "<group>"; };
 		22A06E21285D04E000956B06 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
 		22A06E23285E1B4A00956B06 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		22A06E25285E296000956B06 /* BitMaskCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMaskCategory.swift; sourceTree = "<group>"; };
+		22A8377D2869C4CB002D74DA /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +66,13 @@
 				2234246C285394CA00ED5D33 /* AppDelegate.swift */,
 				2234246E285394CA00ED5D33 /* art.scnassets */,
 				22342470285394CA00ED5D33 /* ViewController.swift */,
+				22A8377D2869C4CB002D74DA /* VirtualObject.swift */,
 				22A06E23285E1B4A00956B06 /* Box.swift */,
 				22A06E21285D04E000956B06 /* Plane.swift */,
 				22A06E25285E296000956B06 /* BitMaskCategory.swift */,
 				22342472285394CA00ED5D33 /* Main.storyboard */,
 				22342475285394D000ED5D33 /* Assets.xcassets */,
 				22342477285394D000ED5D33 /* LaunchScreen.storyboard */,
-				2234248528539A1900ED5D33 /* earth.jpg */,
 			);
 			path = ARKitLearning;
 			sourceTree = "<group>";
@@ -136,7 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2234246F285394CA00ED5D33 /* art.scnassets in Resources */,
-				2234248628539A1A00ED5D33 /* earth.jpg in Resources */,
 				22342479285394D000ED5D33 /* LaunchScreen.storyboard in Resources */,
 				22342476285394D000ED5D33 /* Assets.xcassets in Resources */,
 				22342474285394CA00ED5D33 /* Main.storyboard in Resources */,
@@ -152,6 +151,7 @@
 			files = (
 				22342471285394CA00ED5D33 /* ViewController.swift in Sources */,
 				22A06E24285E1B4A00956B06 /* Box.swift in Sources */,
+				22A8377E2869C4CB002D74DA /* VirtualObject.swift in Sources */,
 				22A06E26285E296000956B06 /* BitMaskCategory.swift in Sources */,
 				22A06E22285D04E100956B06 /* Plane.swift in Sources */,
 				2234246D285394CA00ED5D33 /* AppDelegate.swift in Sources */,

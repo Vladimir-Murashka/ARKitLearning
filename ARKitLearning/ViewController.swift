@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         sceneView.autoenablesDefaultLighting = true
         
         let scene = SCNScene()
-        setupGestures()
+       
         sceneView.scene = scene
         
         sceneView.scene.physicsWorld.contactDelegate = self
@@ -60,7 +60,6 @@ class ViewController: UIViewController {
        
     }
    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -116,7 +115,5 @@ extension ViewController: SCNPhysicsContactDelegate {
         } else {
             nodeB.geometry?.materials.first?.diffuse.contents = UIColor.red
         }
-        
     }
-    
 }
